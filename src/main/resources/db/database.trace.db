@@ -1,0 +1,10 @@
+2020-06-21 23:12:54 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "TEST_DATA" already exists; SQL statement:
+CREATE TABLE test_data (
+ name VARCHAR(25) NOT NULL PRIMARY KEY
+) [42101-196]
+2020-06-21 23:13:41 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "TEST_DATA" already exists; SQL statement:
+CREATE TABLE test_data (
+ name VARCHAR(25) NOT NULL PRIMARY KEY
+) [42101-196]
