@@ -4,23 +4,22 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.junit.*;
 
+import br.veni.model.User;
+import javax.transaction.Transactional;
 
 @SpringBootTest
 public class UsersTest extends EntityManagerTest {
 
-    // @Test
-    // public void whenFindByName_thenReturnEmployee() {
-    //     // given
-    //     Employee alex = new Employee("alex");
-    //     entityManager.persist(alex);
-    //     entityManager.flush();
-    //  
-    //     // when
-    //     Employee found = employeeRepository.findByName(alex.getName());
-    //  
-    //     // then
-    //     assertThat(found.getName())
-    //       .isEqualTo(alex.getName());
-    // }
+    @Transactional
+    @Test
+    public void createUserTest() {
+        User user = new User();
+
+        user.setName("José Lucas");
+        entityManager.persist(user);
+
+        User userVerify = entityManager.find(User.class, user.getId());
+        Assert.assertNotNull(userVerify);
+    }
 
 }

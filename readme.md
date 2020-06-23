@@ -9,6 +9,9 @@
 ##    <version>3.25.2</version>
 ## </dependency>
 
+# run tests
+mvn test
+mvn -Dtest=TestApp1 test
 
 # migrate
 mvn flyway:migrate -Dflyway.configFiles=src\main\resources\application.properties

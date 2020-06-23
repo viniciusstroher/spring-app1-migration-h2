@@ -6,19 +6,21 @@ import org.junit.*;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 
 @SpringBootTest
 public class EntityManagerTest {
 
     private static EntityManagerFactory entityManagerFactory;
 
-    private EntityManager entityManager;
+    @PersistenceContext
+    protected EntityManager entityManager;
 
     @BeforeClass
     public static void setUpBeforeClass() {
         entityManagerFactory = Persistence
                 .createEntityManagerFactory("app");
-        System.out.println(" Iniciando db");
     }
 
     @AfterClass
