@@ -23,4 +23,4 @@ mvn flyway:repair -Dflyway.configFiles=src\main\resources\application.properties
 
 
 # use dbbeaver
-## add h2 embeded and url D:\java_apps\spring-migration\src\main\resources\db\database
+## add h2 embeded and url D:\java_apps\spring-migration\src\main\resources\db\database (database is database.mv.db)

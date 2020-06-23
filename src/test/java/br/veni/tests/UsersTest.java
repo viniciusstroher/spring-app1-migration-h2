@@ -6,11 +6,13 @@ import org.junit.*;
 
 import br.veni.model.User;
 import javax.transaction.Transactional;
+import org.springframework.test.annotation.*;
 
+@Transactional
 @SpringBootTest
 public class UsersTest extends EntityManagerTest {
 
-    @Transactional
+	@Rollback(false)
     @Test
     public void createUserTest() {
         User user = new User();
