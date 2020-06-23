@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS test_data;
 
 CREATE TABLE test_data (
  name VARCHAR(25) NOT NULL PRIMARY KEY
