@@ -19,3 +19,8 @@ mvn flyway:migrate -Dflyway.configFiles=src\main\resources\application.propertie
 mvn flyway:clean -Dflyway.configFiles=src\main\resources\application.properties
 # repair
 mvn flyway:repair -Dflyway.configFiles=src\main\resources\application.properties
+
+
+
+# use dbbeaver
+## add h2 embeded and url D:\java_apps\spring-migration\src\main\resources\db\database
